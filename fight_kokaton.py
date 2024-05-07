@@ -139,6 +139,9 @@ class Score:
         screen.blit(self.img, (200,HEIGHT-100))
         pg.display.update()
 
+class Dird:
+    def __init__(self) -> None:
+        pass
 
 
      
