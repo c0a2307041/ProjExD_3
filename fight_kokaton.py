@@ -129,6 +129,7 @@ class Beam:
             screen.blit(self.img, self.rct)
 
 class Score:
+
     def __init__(self,count =0):
         self.fonto = pg.font.SysFont("hgp創英角ポップ体",30)
         color = (0,0,255)
@@ -139,7 +140,24 @@ class Score:
         screen.blit(self.img, (200,HEIGHT-100))
         pg.display.update()
 
+class Explosion:
+    def __init__(self,bomb):
+        self.img0 = [pg.transform.rotozoom(pg.image.load("explosion.pif"), 0, 2.0),pg.transform.flip(pg.image.load("explosion.pif"), 0, 2.0)]
+        self.rct:pg.Rect = self.img0.get_rect()
+        self.rct.left = bomb.rct.left
+        self.rct.centery = bomb.rct.centery
+        life = 2
+    def updata(self, screen: pg.Surface):
+        screen.blit(self.img0[0], (self.rct.left,self.rct.center)) 
+        pg.display.update()
 
+
+
+
+
+
+
+        
 
      
 
