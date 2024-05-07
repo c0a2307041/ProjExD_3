@@ -128,16 +128,16 @@ class Beam:
             self.rct.move_ip(self.vx, self.vy)
             screen.blit(self.img, self.rct)
 
-class Score:
+class Score:                                            #スコア表示クラス
 
     def __init__(self,count =0):
         self.fonto = pg.font.SysFont("hgp創英角ポップ体",30)
-        color = (0,0,255)
-        score = count
-        self.img = self.fonto.render("score"+str(score),True,color)
+        color = (0,0,255)#色
+        score = count#カウント数更新
+        self.img = self.fonto.render("score"+str(score),True,color)#表示する文
         
     def updata(self, screen: pg.Surface):
-        screen.blit(self.img, (200,HEIGHT-100))
+        screen.blit(self.img, (200,HEIGHT-100))#座標決定
         pg.display.update()
 
 class Dird:
