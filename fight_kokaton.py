@@ -128,7 +128,7 @@ class Beam:
             self.rct.move_ip(self.vx, self.vy)
             screen.blit(self.img, self.rct)
 
-class Score:                                            #スコア表示クラス
+class Score:                                            #スコア表示クラス！
 
     def __init__(self,count =0):
         self.fonto = pg.font.SysFont("hgp創英角ポップ体",30)
